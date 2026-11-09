@@ -199,6 +199,8 @@ npm run dev
 
 The API listens on port `5001` by default.
 
+Alternatively, start the API from the repository root with `npm run dev:server`.
+
 ### 3. Configure and run the client
 
 In another terminal:
@@ -224,6 +226,19 @@ npm run dev
 ```
 
 Open the local URL printed by Vite (normally `http://localhost:5173`).
+
+### Production deployment (Vercel + Render)
+
+Set the Vercel project root directory to `expense-client` and configure
+`VITE_SERVER_ENDPOINT=/api`. The Vercel rewrites in
+`expense-client/vercel.json` proxy API requests to the Render backend and serve
+the React app for direct routes such as `/register`.
+
+On Render, configure the backend environment with the production MongoDB URI,
+a strong `JWT_SECRET`, `PORT` (if required by the service), and
+`CLIENT_URL=https://expense-merge-v2.vercel.app`. Keep all backend secrets in
+Render, never in Vercel's `VITE_` variables. Redeploy both services after
+changing deployment settings.
 
 > **Windows PowerShell:** From the repository root, you can copy the examples with `Copy-Item expense-server/.env.example expense-server/.env` and `Copy-Item expense-client/.env.example expense-client/.env`.
 >

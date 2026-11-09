@@ -41,7 +41,9 @@ function Register() {
         } catch (requestError) {
             setError(
                 requestError.response?.data?.message ||
-                    "Unable to create your account. Please try again."
+                    (requestError.response
+                        ? "Unable to create your account. Please try again."
+                        : "Unable to connect to the server. Make sure the API is running and try again.")
             );
         }
     };

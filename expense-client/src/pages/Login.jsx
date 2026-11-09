@@ -72,7 +72,12 @@ function Login() {
             } catch (error) {
                 console.log(error);
                 setErrors({
-                    message: "Something went wrong, please try again",
+                    message:
+                        error.response?.data?.message ||
+                        error.response?.data?.errors?.[0]?.msg ||
+                        (error.response
+                            ? "Unable to sign in. Please check your details and try again."
+                            : "Unable to connect to the server. Make sure the API is running and try again."),
                 });
             }
         }
