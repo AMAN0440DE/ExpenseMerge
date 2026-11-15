@@ -1,6 +1,6 @@
 # 💸 MergeMoney
 
-[Live app](https://expense-merge-v2.vercel.app/)
+CLick here for exploring [Live app](https://expense-merge-v2.vercel.app/)
 
 ![MergeMoney app screenshot](./assets/img.png)
 
