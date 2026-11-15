@@ -1,5 +1,9 @@
 # 💸 MergeMoney
 
+[Live app](https://expense-merge-v2.vercel.app/)
+
+![MergeMoney app screenshot](./assets/img.png)
+
 ### Personal money, shared clearly.
 
 **MergeMoney** brings everyday expense tracking and group bill-splitting into one place. Track income and spending, share costs with the people you travel, live, or plan with, and see who owes whom—without juggling spreadsheets, chat history, and separate finance apps.
